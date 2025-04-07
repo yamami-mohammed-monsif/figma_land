@@ -8,7 +8,7 @@ import {
 } from "@/constants/animations";
 import { useMobileMenu } from "@/hooks/useMobileMenu";
 import NavLink from "./NavLink";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "motion/react";
 import HamburgerButton from "../UI/HamburgerButton";
 import Image from "next/image";
 

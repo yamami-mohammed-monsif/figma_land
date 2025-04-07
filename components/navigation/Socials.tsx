@@ -4,10 +4,17 @@ import {
   faFacebook,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
+import { motion } from "motion/react";
+import { socialIconsAnimation } from "@/constants/animations";
 
 const Socials: React.FC = () => {
   return (
-    <div className="flex items-center gap-11 ml-[100px] xl:ml-[270px]">
+    <motion.div
+      variants={socialIconsAnimation}
+      initial="initial"
+      animate="animate"
+      className="flex items-center gap-11 ml-[100px] xl:ml-[270px]"
+    >
       <FontAwesomeIcon
         icon={faTwitter}
         size="2x"
@@ -23,7 +30,7 @@ const Socials: React.FC = () => {
         size="2x"
         className="text-white hover:text-primary hover:cursor-pointer hover:scale-110 transition-all duration-200"
       />
-    </div>
+    </motion.div>
   );
 };
 

@@ -9,6 +9,9 @@ interface buttonProps {
   fontSize?: string;
   className?: string;
   "aria-label"?: string;
+  variants?: any;
+  initial?: string;
+  animate?: string;
 }
 
 const Button: React.FC<buttonProps> = ({
@@ -18,9 +21,15 @@ const Button: React.FC<buttonProps> = ({
   fontSize = "text-base",
   className,
   "aria-label": ariaLabel,
+  variants,
+  initial,
+  animate,
 }) => {
   return (
     <motion.button
+      variants={variants}
+      initial={initial}
+      animate={animate}
       whileHover={{
         scale: 1.05,
         y: -5,
