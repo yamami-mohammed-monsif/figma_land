@@ -6,8 +6,12 @@ import {
   paragraphAnimation,
   buttonAnimation,
 } from "@/constants/animations";
+import { useMediaQuery } from "@/hooks/useMediaQuery";
 
 const Hero: React.FC = () => {
+  const isDesktop = useMediaQuery("(min-width: 1024px)");
+  const delay = isDesktop ? 1.9 : 0.8;
+
   return (
     <Section className="text-white text-center px-5 py-8">
       <div className="py-[50px] max-w-[826px] mx-auto">
@@ -15,6 +19,7 @@ const Hero: React.FC = () => {
           variants={headingAnimation}
           initial="initial"
           animate="animate"
+          custom={delay}
           className="text-4xl md:text-6xl font-bold"
         >
           The best products start with Figma
@@ -23,6 +28,7 @@ const Hero: React.FC = () => {
           variants={paragraphAnimation}
           initial="initial"
           animate="animate"
+          custom={delay + 0.3}
           className="text-[28px] leading-[40px] p-2.5 tracking-[0.2px]"
         >
           Most calendars are designed for teams.{" "}
@@ -39,6 +45,7 @@ const Hero: React.FC = () => {
         variants={buttonAnimation}
         initial="initial"
         animate="animate"
+        custom={delay + 0.6}
       >
         Try For Free
       </Button>

@@ -12,6 +12,7 @@ interface buttonProps {
   variants?: any;
   initial?: string;
   animate?: string;
+  custom?: number;
 }
 
 const Button: React.FC<buttonProps> = ({
@@ -24,12 +25,14 @@ const Button: React.FC<buttonProps> = ({
   variants,
   initial,
   animate,
+  custom,
 }) => {
   return (
     <motion.button
       variants={variants}
       initial={initial}
       animate={animate}
+      custom={custom}
       whileHover={{
         scale: 1.05,
         y: -5,

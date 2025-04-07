@@ -24,6 +24,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${inter.variable} ${roboto.variable}`}>
+      <head>
+        <title>Figma Land</title>
+      </head>
       <body>{children}</body>
     </html>
   );

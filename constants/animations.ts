@@ -107,15 +107,15 @@ export const headingAnimation = {
     opacity: 0,
     x: -50,
   },
-  animate: {
+  animate: (customDelay: number) => ({
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.7,
-      delay: 1.9, // Start after nav and social animations
+      delay: customDelay,
       ease: "easeOut",
     },
-  },
+  }),
 };
 
 export const paragraphAnimation = {
@@ -123,15 +123,15 @@ export const paragraphAnimation = {
     opacity: 0,
     x: 50,
   },
-  animate: {
+  animate: (customDelay: number) => ({
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.7,
-      delay: 2.3, // Start after heading animation
+      delay: customDelay,
       ease: "easeOut",
     },
-  },
+  }),
 };
 
 export const buttonAnimation = {
@@ -139,13 +139,13 @@ export const buttonAnimation = {
     opacity: 0,
     x: -50,
   },
-  animate: {
+  animate: (customDelay: number) => ({
     opacity: 1,
     x: 0,
     transition: {
       duration: 0.7,
-      delay: 2.7, // Start after paragraph animation
+      delay: customDelay,
       ease: "easeOut",
     },
-  },
+  }),
 };
