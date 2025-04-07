@@ -1,5 +1,6 @@
 import React from "react";
 import NavBar from "@/components/navigation/NavBar";
+import Hero from "@/components/Hero";
 
 const HomePage: React.FC = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage: React.FC = () => {
           <div className="absolute inset-0 -z-10 bg-overlay" />
         </div>
         <NavBar />
+        <Hero />
       </div>
     </main>
   );

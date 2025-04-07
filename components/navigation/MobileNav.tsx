@@ -1,25 +1,19 @@
 "use client";
 
 import { NavLinks } from "@/constants";
+import {
+  slideAnimation,
+  fadeAnimation,
+  staggerItemAnimation,
+} from "@/constants/animations";
+import { useMobileMenu } from "@/hooks/useMobileMenu";
 import NavLink from "./NavLink";
 import { motion, AnimatePresence } from "framer-motion";
-import { useEffect } from "react";
 import HamburgerButton from "../UI/HamburgerButton";
 import Image from "next/image";
 
-interface MobileNavProps {
-  isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
-}
-
-const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
-  // Prevent scrolling when menu is open
-  useEffect(() => {
-    document.body.style.overflow = isOpen ? "hidden" : "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-    };
-  }, [isOpen]);
+const MobileNav: React.FC = () => {
+  const { isOpen, setIsOpen, closeMenu } = useMobileMenu();
 
   return (
     <nav className="lg:hidden">
@@ -37,11 +31,9 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            {...fadeAnimation}
             className="fixed inset-0 bg-black/50 z-20"
-            onClick={() => setIsOpen(false)}
+            onClick={closeMenu}
           />
         )}
       </AnimatePresence>
@@ -49,24 +41,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
       <motion.ul
         initial={false}
         animate={isOpen ? "open" : "closed"}
-        variants={{
-          open: {
-            x: 0,
-            transition: {
-              type: "spring",
-              damping: 25,
-              stiffness: 200,
-            },
-          },
-          closed: {
-            x: "100%",
-            transition: {
-              type: "tween",
-              duration: 0.3,
-              ease: "easeInOut",
-            },
-          },
-        }}
+        variants={slideAnimation}
         className="fixed inset-y-0 right-0 w-[70%] z-30 bg-white p-8"
         aria-label="Mobile navigation menu"
         role="menu"
@@ -74,8 +49,7 @@ const MobileNav: React.FC<MobileNavProps> = ({ isOpen, setIsOpen }) => {
         {NavLinks.map((item) => (
           <motion.li
             key={item.id}
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
+            {...staggerItemAnimation}
             transition={{ delay: item.id * 0.1 }}
             className="list-none"
           >
