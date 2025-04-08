@@ -150,6 +150,7 @@ export const buttonAnimation = {
   }),
 };
 
+// Feature cards animations
 export const featureCardVariants = {
   left: {
     initial: { opacity: 0, x: -100 },
@@ -164,7 +165,7 @@ export const featureCardVariants = {
     animate: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: "easeOut" },
+      transition: { duration: 0.6, ease: "easeOut" },
     },
   },
   right: {
@@ -235,6 +236,34 @@ export const subscribeFormAnimation = {
     transition: {
       duration: 0.8,
       ease: "easeOut",
+    },
+  },
+};
+
+// Pricing section animations
+export const PricingCardsVariants = {
+  left: {
+    initial: { opacity: 0, x: 100 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut", delay: 0.6 },
+    },
+  },
+  middle: {
+    initial: { opacity: 0, y: 60 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  },
+  right: {
+    initial: { opacity: 0, x: -100 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut", delay: 0.6 },
     },
   },
 };

@@ -1,4 +1,5 @@
 import Button from "./UI/Button";
+import { motion } from "motion/react";
 
 interface PricingCardsProps {
   title: string;
@@ -6,6 +7,7 @@ interface PricingCardsProps {
   price: string;
   features: string[];
   isHighlighted?: boolean;
+  variants?: any;
 }
 
 const PricingCards = ({
@@ -14,14 +16,19 @@ const PricingCards = ({
   price,
   features,
   isHighlighted = false,
+  variants,
 }: PricingCardsProps) => {
   return (
-    <div
+    <motion.div
       className={`max-w-[335px] mx-auto p-10 mt-[80px] rounded-[10px] text-center flex flex-col gap-[30px] ${
         isHighlighted
           ? "bg-primary text-white border border-primary scale-110"
           : "bg-white text-paragraph"
       }`}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.5 }}
+      variants={variants}
     >
       <div>
         <h4 className={`${isHighlighted ? "text-white" : "text-title"} mb-2.5`}>
@@ -63,7 +70,7 @@ const PricingCards = ({
       >
         Order Now
       </Button>
-    </div>
+    </motion.div>
   );
 };
 
