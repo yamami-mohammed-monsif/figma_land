@@ -20,7 +20,6 @@ const Hero: React.FC = () => {
           initial="initial"
           animate="animate"
           custom={delay}
-          className="text-4xl md:text-6xl font-bold"
         >
           The best products start with Figma
         </motion.h1>

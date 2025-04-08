@@ -25,3 +25,30 @@ export const NavLinks = [
     href: "#contact",
   },
 ];
+
+export const Features = [
+  {
+    id: 1,
+    title: "OpenType features Variable fonts",
+    description:
+      "Slate helps you see how many more days you need to work to reach your financial goal.",
+    image: "/assets/feature-icon1.svg",
+    alt: "Feature 1",
+  },
+  {
+    id: 2,
+    title: "Design with real data",
+    description:
+      "Slate helps you see how many more days you need to work to reach your financial goal.",
+    image: "/assets/feature-icon2.svg",
+    alt: "Feature 2",
+  },
+  {
+    id: 3,
+    title: "Fastest way to take action",
+    description:
+      "Slate helps you see how many more days you need to work to reach your financial goal.",
+    image: "/assets/feature-icon3.svg",
+    alt: "Feature 3",
+  },
+];

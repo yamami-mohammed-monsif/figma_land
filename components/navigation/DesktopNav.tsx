@@ -35,7 +35,7 @@ const DesktopNav: React.FC = () => {
           animate="animate"
         >
           <Image
-            src="/images/logo.svg"
+            src="/assets/logo.svg"
             alt="Company logo"
             width={186}
             height={58}

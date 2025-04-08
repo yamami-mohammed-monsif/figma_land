@@ -18,15 +18,28 @@
   --spacing-19: 76px;
   --spacing-28: 112px;
   --spacing-37: 148px;
+
+  --shadow-video: 0 5px 25px hsla(0, 0%, 0%, 0.15);
 }
 
 @layer base {
+  body {
+    @apply font-inter;
+  }
   h1 {
-    @apply text-5xl md:text-6xl lg:text-[64px] xl:text-[70px] 2xl:text-[74px] leading-[55px] lg:leading-[84px] lg:font-bold tracking-[0.2px] p-2.5;
+    @apply text-5xl md:text-6xl lg:text-[64px] xl:text-[70px] 2xl:text-[74px] leading-[55px] md:leading-[70px] lg:leading-[84px] font-normal lg:font-bold tracking-[0.2px] p-2.5;
+  }
+
+  h2 {
+    @apply text-title text-[48px] leading-[58px] tracking-[0.2px];
+  }
+
+  h3 {
+    @apply text-title text-2xl font-bold leading-[28px] tracking-[0.2px];
   }
 }
 
 .hero-background {
-  background-image: url("/images/hero-img.webp");
+  background-image: url("/assets/hero-img.webp");
   clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0 85%, 0 0);
 }

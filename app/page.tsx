@@ -5,6 +5,7 @@ import NavBar from "@/components/navigation/NavBar";
 import Hero from "@/components/Hero";
 import { motion } from "motion/react";
 import { heroBackgroundAnimation } from "@/constants/animations";
+import Features from "@/components/Features";
 
 const HomePage: React.FC = () => {
   return (
@@ -22,6 +23,7 @@ const HomePage: React.FC = () => {
         <NavBar />
         <Hero />
       </div>
+      <Features />
     </main>
   );
 };

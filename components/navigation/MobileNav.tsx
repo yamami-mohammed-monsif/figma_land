@@ -19,7 +19,7 @@ const MobileNav: React.FC = () => {
     <nav className="lg:hidden">
       <div className="flex items-center justify-between p-4">
         <Image
-          src="/images/logo.svg"
+          src="/assets/logo.svg"
           alt="Company logo"
           width={186}
           height={58}
