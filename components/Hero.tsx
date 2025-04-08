@@ -37,6 +37,7 @@ const Hero: React.FC = () => {
         </motion.p>
       </div>
       <Button
+        variant="primary"
         paddingX="px-16"
         paddingY="py-4"
         fontSize="text-xl"

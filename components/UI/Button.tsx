@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 
 interface buttonProps {
   children: React.ReactNode;
+  variant?: "primary" | "secondary";
   paddingX?: string;
   paddingY?: string;
   fontSize?: string;
@@ -18,6 +19,7 @@ interface buttonProps {
 
 const Button: React.FC<buttonProps> = ({
   children,
+  variant = "primary",
   paddingX = "px-8",
   paddingY = "py-4",
   fontSize = "text-base",
@@ -44,7 +46,11 @@ const Button: React.FC<buttonProps> = ({
         scale: 0.9,
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className={`rounded-full text-white cursor-pointer font-inter bg-primary ${paddingX} ${paddingY} ${fontSize} ${fontWeight} ${className}`}
+      className={`rounded-full cursor-pointer font-inter ${
+        variant === "primary"
+          ? "bg-primary text-white"
+          : "bg-white text-primary border border-primary"
+      } ${paddingX} ${paddingY} ${fontSize} ${fontWeight} ${className}`}
       aria-label={ariaLabel}
     >
       {children}

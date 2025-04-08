@@ -65,7 +65,12 @@ const Subscribe = () => {
               placeholder="Your Email"
               className="py-[19px] px-[35px] border border-input-border rounded-full bg-input-bg placeholder:text-placeholder placeholder:text-sm"
             />
-            <Button fontSize="text-xl" paddingY="py-4" paddingX="px-9">
+            <Button
+              variant="primary"
+              fontSize="text-xl"
+              paddingY="py-4"
+              paddingX="px-9"
+            >
               Subscribe
             </Button>
           </form>

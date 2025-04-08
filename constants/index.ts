@@ -79,3 +79,30 @@ export const Partners = [
     alt: "Partner 4",
   },
 ];
+
+export const PlanFeatures = [
+  {
+    id: 1,
+    title: "FREE",
+    description: "Organize across all apps by hand",
+    price: "0",
+    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+    isHighlighted: false,
+  },
+  {
+    id: 2,
+    title: "STANDARD",
+    description: "Organize across all apps by hand",
+    price: "10",
+    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+    isHighlighted: true,
+  },
+  {
+    id: 3,
+    title: "BUSINESS",
+    description: "Organize across all apps by hand",
+    price: "99",
+    features: ["Feature 1", "Feature 2", "Feature 3", "Feature 4", "Feature 5"],
+    isHighlighted: false,
+  },
+];

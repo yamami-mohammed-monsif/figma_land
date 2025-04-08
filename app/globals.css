@@ -38,6 +38,10 @@
   h3 {
     @apply text-title text-2xl font-bold leading-[28px] tracking-[0.2px];
   }
+
+  h4 {
+    @apply text-xl font-bold leading-[28px];
+  }
 }
 
 .hero-background {

@@ -21,6 +21,7 @@ const CTA = () => {
             freelancers
           </p>
           <Button
+            variant="primary"
             paddingX="px-[60px]"
             paddingY="py-4"
             fontSize="text-xl"
