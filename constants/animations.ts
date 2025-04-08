@@ -207,3 +207,34 @@ export const ctaImageAnimation = {
     },
   },
 };
+
+// Subscribe section animations
+export const subscribeImageAnimation = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const subscribeFormAnimation = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
