@@ -149,3 +149,30 @@ export const buttonAnimation = {
     },
   }),
 };
+
+export const featureCardVariants = {
+  left: {
+    initial: { opacity: 0, x: -100 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  },
+  middle: {
+    initial: { opacity: 0, y: 60 },
+    animate: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  },
+  right: {
+    initial: { opacity: 0, x: 100 },
+    animate: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.7, ease: "easeOut" },
+    },
+  },
+};
