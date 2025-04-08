@@ -6,7 +6,7 @@ import Hero from "@/components/Hero";
 import { motion } from "motion/react";
 import { heroBackgroundAnimation } from "@/constants/animations";
 import Features from "@/components/Features";
-
+import CTA from "@/components/CTA";
 const HomePage: React.FC = () => {
   return (
     <main className="min-h-screen">
@@ -24,6 +24,7 @@ const HomePage: React.FC = () => {
         <Hero />
       </div>
       <Features />
+      <CTA />
     </main>
   );
 };

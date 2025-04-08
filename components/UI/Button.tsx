@@ -7,6 +7,7 @@ interface buttonProps {
   paddingX?: string;
   paddingY?: string;
   fontSize?: string;
+  fontWeight?: string;
   className?: string;
   "aria-label"?: string;
   variants?: any;
@@ -20,6 +21,7 @@ const Button: React.FC<buttonProps> = ({
   paddingX = "px-8",
   paddingY = "py-4",
   fontSize = "text-base",
+  fontWeight = "font-normal",
   className,
   "aria-label": ariaLabel,
   variants,
@@ -42,7 +44,7 @@ const Button: React.FC<buttonProps> = ({
         scale: 0.9,
       }}
       transition={{ duration: 0.2, ease: "easeOut" }}
-      className={`rounded-full cursor-pointer font-inter bg-primary ${paddingX} ${paddingY} ${fontSize} ${className}`}
+      className={`rounded-full text-white cursor-pointer font-inter bg-primary ${paddingX} ${paddingY} ${fontSize} ${fontWeight} ${className}`}
       aria-label={ariaLabel}
     >
       {children}

@@ -31,7 +31,7 @@
   }
 
   h2 {
-    @apply text-title text-[48px] leading-[58px] tracking-[0.2px];
+    @apply text-title text-[48px] leading-[58px] tracking-[0.2px] p-2.5 mb-2;
   }
 
   h3 {
