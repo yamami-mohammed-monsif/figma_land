@@ -6,7 +6,7 @@ import { ctaTextAnimation, ctaImageAnimation } from "../constants/animations";
 
 const CTA = () => {
   return (
-    <Section className="py-[80px]">
+    <Section>
       <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-14">
         <motion.div
           className="text-center lg:text-left"
@@ -16,7 +16,7 @@ const CTA = () => {
           viewport={{ once: true, amount: 0.5 }}
         >
           <h2>Fastest way to organize</h2>
-          <p className="text-xl lg:text-[28px] text-paragraph lg:leading-[40px] p-2.5 tracking-[0.2px] max-w-[600px]">
+          <p className="paragraph-large">
             Most calendars are designed for teams. Slate is designed for
             freelancers
           </p>

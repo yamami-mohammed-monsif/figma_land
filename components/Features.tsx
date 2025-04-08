@@ -8,7 +8,7 @@ const Features = () => {
   const { left, middle, right } = featureCardVariants;
 
   return (
-    <Section className="py-[80px]">
+    <Section>
       <div className="flex flex-col gap-[50px] lg:gap-[80px]">
         <header className="text-center">
           <motion.h2
@@ -24,7 +24,7 @@ const Features = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
-            className="text-xl lg:text-[28px] text-paragraph lg:leading-[40px] p-2.5 tracking-[0.2px]"
+            className="paragraph-large"
           >
             Most calendars are designed for teams. Slate is designed for
             freelancers

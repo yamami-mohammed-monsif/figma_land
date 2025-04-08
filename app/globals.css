@@ -6,9 +6,10 @@
   --color-title: hsla(228, 28%, 20%, 1);
   --color-paragraph: hsla(207, 21%, 27%, 1);
 
-  --input-bg: hsla(0, 0%, 96%, 1);
-  --input-border: hsla(0, 0%, 91%, 1);
-  --pattern-border: hsla(0, 0%, 85%, 1);
+  --color-input-bg: hsla(0, 0%, 96%, 1);
+  --color-input-border: hsla(0, 0%, 91%, 1);
+  --color-pattern-border: hsla(0, 0%, 85%, 1);
+  --color-placeholder: hsla(250, 12%, 10%, 1);
 
   --color-overlay: hsla(0, 0%, 0%, 0.5);
 
@@ -42,4 +43,8 @@
 .hero-background {
   background-image: url("/assets/hero-img.webp");
   clip-path: polygon(100% 0%, 100% 85%, 50% 100%, 0 85%, 0 0);
+}
+
+.paragraph-large {
+  @apply text-xl lg:text-[28px] text-paragraph lg:leading-[40px] p-2.5 tracking-[0.2px] max-w-[600px] mx-auto;
 }
