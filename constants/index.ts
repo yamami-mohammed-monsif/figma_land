@@ -52,3 +52,30 @@ export const Features = [
     alt: "Feature 3",
   },
 ];
+
+export const Partners = [
+  {
+    id: 1,
+    name: "Google",
+    image: "/assets/google.svg",
+    alt: "Partner 1",
+  },
+  {
+    id: 2,
+    name: "Amazon",
+    image: "/assets/amazon.svg",
+    alt: "Partner 2",
+  },
+  {
+    id: 3,
+    name: "Microsoft",
+    image: "/assets/microsoft.svg",
+    alt: "Partner 3",
+  },
+  {
+    id: 4,
+    name: "Uber",
+    image: "/assets/uber.svg",
+    alt: "Partner 4",
+  },
+];

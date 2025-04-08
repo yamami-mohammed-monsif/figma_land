@@ -8,6 +8,7 @@ import { heroBackgroundAnimation } from "@/constants/animations";
 import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import Subscribe from "@/components/Subscribe";
+import Partners from "@/components/Partners";
 
 const HomePage: React.FC = () => {
   return (
@@ -28,6 +29,7 @@ const HomePage: React.FC = () => {
       <Features />
       <CTA />
       <Subscribe />
+      <Partners />
     </main>
   );
 };
