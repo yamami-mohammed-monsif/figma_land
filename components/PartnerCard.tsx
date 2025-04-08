@@ -1,17 +1,28 @@
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface PartnerCardProps {
   name: string;
   image: string;
   alt: string;
+  index: number;
 }
 
-const PartnerCard = ({ name, image, alt }: PartnerCardProps) => {
+const PartnerCard = ({ name, image, alt, index }: PartnerCardProps) => {
   return (
-    <div className="border border-pattern-border py-6 px-10 mx-auto text-center">
-      <p className=" text-base text-paragraph leading-[22px] mb-4">{name}</p>
+    <motion.div
+      className="border border-pattern-border py-6 px-10 mx-auto text-center"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{
+        duration: 0.5,
+        delay: index * 0.2, // This creates the stagger effect
+      }}
+    >
+      <p className="text-base text-paragraph leading-[22px] mb-4">{name}</p>
       <Image src={image} alt={alt} width={100} height={100} />
-    </div>
+    </motion.div>
   );
 };
 
