@@ -9,6 +9,7 @@ import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import Subscribe from "@/components/Subscribe";
 import Partners from "@/components/Partners";
+import Testimonials from "@/components/Testimonials";
 
 const HomePage: React.FC = () => {
   return (
@@ -30,6 +31,7 @@ const HomePage: React.FC = () => {
       <CTA />
       <Subscribe />
       <Partners />
+      <Testimonials />
     </main>
   );
 };
