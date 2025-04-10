@@ -15,6 +15,7 @@ interface buttonProps {
   initial?: string;
   animate?: string;
   custom?: number;
+  disabled?: boolean;
 }
 
 const Button: React.FC<buttonProps> = ({
@@ -30,6 +31,7 @@ const Button: React.FC<buttonProps> = ({
   initial,
   animate,
   custom,
+  disabled,
 }) => {
   return (
     <motion.button
@@ -52,6 +54,7 @@ const Button: React.FC<buttonProps> = ({
           : "bg-white text-primary border border-primary"
       } ${paddingX} ${paddingY} ${fontSize} ${fontWeight} ${className}`}
       aria-label={ariaLabel}
+      disabled={disabled}
     >
       {children}
     </motion.button>

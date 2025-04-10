@@ -7,6 +7,7 @@ import {
   subscribeImageAnimation,
   subscribeFormAnimation,
 } from "@/constants/animations";
+import NewsletterForm from "./NewsletterForm";
 
 const Subscribe = () => {
   const isDesktop = useMediaQuery("(min-width: 1024px)");
@@ -56,24 +57,8 @@ const Subscribe = () => {
           <p className="text-lg leading-[25px] mt-2.5">
             Available exclusivery on Figmaland
           </p>
-          <form
-            action=""
-            className="flex flex-col lg:flex-row gap-[12px] py-6 max-w-[500px] mx-auto lg:mx-0"
-          >
-            <input
-              type="email"
-              placeholder="Your Email"
-              className="py-[19px] px-[35px] border border-input-border rounded-full bg-input-bg placeholder:text-placeholder placeholder:text-sm"
-            />
-            <Button
-              variant="primary"
-              fontSize="text-xl"
-              paddingY="py-4"
-              paddingX="px-9"
-            >
-              Subscribe
-            </Button>
-          </form>
+
+          <NewsletterForm />
         </motion.div>
       </div>
     </Section>
