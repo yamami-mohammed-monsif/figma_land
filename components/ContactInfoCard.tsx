@@ -5,23 +5,34 @@ import { motion } from "motion/react";
 
 interface ContactInfoCardProps {
   icon: IconProp;
+  iconColor: string;
   text: string;
   index: number;
+  className?: string;
+  variants?: any;
 }
 
-const ContactInfoCard = ({ icon, text, index }: ContactInfoCardProps) => {
+const ContactInfoCard = ({
+  icon,
+  text,
+  index,
+  iconColor,
+  className,
+  variants,
+}: ContactInfoCardProps) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: 100 }}
-      whileInView={{ opacity: 1, x: 0 }}
+      variants={variants}
+      initial="initial"
+      whileInView="whileInView"
       viewport={{ once: true, amount: 0.5 }}
       transition={{
         duration: 0.5,
         delay: index * 0.15, // stagger effect
       }}
-      className="flex items-center gap-2.5 p-2.5 lg:flex-col lg:justify-start lg:flex-1 text-center"
+      className={`flex items-center gap-2.5 p-2.5 ${className}`}
     >
-      <FontAwesomeIcon icon={icon} size="2x" className="text-primary" />
+      <FontAwesomeIcon icon={icon} size="2x" className={`${iconColor}`} />
       <span className="text-sm">{text}</span>
     </motion.div>
   );

@@ -298,3 +298,23 @@ export const contactSocialsAnimation = {
     },
   },
 };
+
+// Contact info card animation
+export const contactInfoCardAnimation = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  whileInView: {
+    opacity: 1,
+    x: 0,
+  },
+  viewport: {
+    once: true,
+    amount: 0.5,
+  },
+  transition: (index: number) => ({
+    duration: 0.5,
+    delay: index * 0.15, // stagger effect
+  }),
+};

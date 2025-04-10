@@ -10,6 +10,7 @@ import ContactForm from "./ContactForm";
 import Image from "next/image";
 import { motion } from "motion/react";
 import ContactInfoCard from "./ContactInfoCard";
+import { contactInfoCardAnimation } from "@/constants/animations";
 
 const Contact = () => {
   return (
@@ -61,18 +62,36 @@ const Contact = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[50px] lg:order-1">
               <ContactInfoCard
                 icon={faLocationDot}
+                iconColor="text-primary"
                 text="6386 Spring St undefined Anchorage, Georgia 12473 United States"
                 index={0}
+                className="lg:flex-col lg:justify-start lg:flex-1 text-center"
+                variants={{
+                  initial: contactInfoCardAnimation.initial,
+                  whileInView: contactInfoCardAnimation.whileInView,
+                }}
               />
               <ContactInfoCard
                 icon={faMobileScreen}
+                iconColor="text-primary"
                 text="(843) 555-0130"
                 index={1}
+                className="lg:flex-col lg:justify-start lg:flex-1 text-center"
+                variants={{
+                  initial: contactInfoCardAnimation.initial,
+                  whileInView: contactInfoCardAnimation.whileInView,
+                }}
               />
               <ContactInfoCard
                 icon={faEnvelope}
+                iconColor="text-primary"
                 text="willie.jennings@example.com"
                 index={2}
+                className="lg:flex-col lg:justify-start lg:flex-1 text-center"
+                variants={{
+                  initial: contactInfoCardAnimation.initial,
+                  whileInView: contactInfoCardAnimation.whileInView,
+                }}
               />
             </div>
           </div>

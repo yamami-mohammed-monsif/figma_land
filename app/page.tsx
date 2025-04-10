@@ -12,6 +12,7 @@ import Partners from "@/components/Partners";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 const HomePage: React.FC = () => {
   return (
@@ -36,6 +37,7 @@ const HomePage: React.FC = () => {
       <Testimonials />
       <Pricing />
       <Contact />
+      <Footer />
     </main>
   );
 };
