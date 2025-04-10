@@ -17,7 +17,7 @@ const PartnerCard = ({ name, image, alt, index }: PartnerCardProps) => {
       viewport={{ once: true }}
       transition={{
         duration: 0.5,
-        delay: index * 0.2, // This creates the stagger effect
+        delay: index * 0.15, // This creates the stagger effect
       }}
     >
       <p className="text-base text-paragraph leading-[22px] mb-4">{name}</p>
