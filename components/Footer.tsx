@@ -8,6 +8,8 @@ import {
   faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 import Socials from "./UI/Socials";
+import { motion } from "motion/react";
+
 const Footer = () => {
   return (
     <footer className="bg-title text-white">
@@ -17,9 +19,13 @@ const Footer = () => {
             <p className="text-xl font-bold p-2.5">Pages</p>
             <ul className="flex flex-col gap-4">
               {NavLinks.map((link) => (
-                <li key={link.id}>
+                <motion.li
+                  key={link.id}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
                   <Link href={link.href}>{link.label}</Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -27,9 +33,13 @@ const Footer = () => {
             <p className="text-xl font-bold p-2.5">Eleanor Edwards</p>
             <ul className="flex flex-col gap-4">
               {NavLinks.map((link) => (
-                <li key={link.id}>
+                <motion.li
+                  key={link.id}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
                   <Link href={link.href}>Ted Robertson</Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -37,9 +47,13 @@ const Footer = () => {
             <p className="text-xl font-bold p-2.5">Eleanor Edwards</p>
             <ul className="flex flex-col gap-4">
               {NavLinks.map((link) => (
-                <li key={link.id}>
+                <motion.li
+                  key={link.id}
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                >
                   <Link href={link.href}>Ted Robertson</Link>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
