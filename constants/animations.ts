@@ -85,7 +85,7 @@ export const navLinksAnimation = {
   },
 };
 
-export const socialIconsAnimation = {
+export const navSocialsAnimation = {
   initial: {
     opacity: 0,
     x: -70,
@@ -247,7 +247,7 @@ export const PricingCardsVariants = {
     animate: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.4 },
     },
   },
   middle: {
@@ -263,7 +263,38 @@ export const PricingCardsVariants = {
     animate: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut", delay: 0.6 },
+      transition: { duration: 0.5, ease: "easeOut", delay: 0.4 },
+    },
+  },
+};
+
+// Contact section animations
+export const contactFormAnimation = {
+  initial: {
+    opacity: 0,
+    x: -100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const contactSocialsAnimation = {
+  initial: {
+    opacity: 0,
+    x: 100,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeOut",
     },
   },
 };

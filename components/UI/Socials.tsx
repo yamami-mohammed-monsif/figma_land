@@ -5,20 +5,24 @@ import {
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "motion/react";
-import { socialIconsAnimation } from "@/constants/animations";
 
 interface SocialsProps {
   color?: string;
   className?: string;
+  variants?: any;
 }
 
-const Socials: React.FC<SocialsProps> = ({ color = "white", className }) => {
+const Socials: React.FC<SocialsProps> = ({
+  color = "white",
+  className,
+  variants,
+}) => {
   // Handle color class based on input
   const colorClass = color.startsWith("text-") ? color : `text-${color}`;
 
   return (
     <motion.div
-      variants={socialIconsAnimation}
+      variants={variants}
       initial="initial"
       animate="animate"
       className={`flex items-center gap-11 ${className}`}

@@ -14,10 +14,10 @@ const PartnerCard = ({ name, image, alt, index }: PartnerCardProps) => {
       className="border border-pattern-border py-6 px-10 mx-auto text-center"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true }}
+      viewport={{ once: true, amount: 0.5 }}
       transition={{
         duration: 0.5,
-        delay: index * 0.15, // This creates the stagger effect
+        delay: index * 0.15, // stagger effect
       }}
     >
       <p className="text-base text-paragraph leading-[22px] mb-4">{name}</p>

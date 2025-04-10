@@ -2,7 +2,11 @@ import { NavLinks } from "@/constants";
 import NavLink from "./NavLink";
 import Image from "next/image";
 import Socials from "../UI/Socials";
-import { logoAnimation, navLinksAnimation } from "@/constants/animations";
+import {
+  logoAnimation,
+  navLinksAnimation,
+  navSocialsAnimation,
+} from "@/constants/animations";
 import { motion } from "motion/react";
 
 const DesktopNav: React.FC = () => {
@@ -42,7 +46,10 @@ const DesktopNav: React.FC = () => {
             priority
           />
         </motion.div>
-        <Socials className="ml-[100px] xl:ml-[270px]" />
+        <Socials
+          className="ml-[100px] xl:ml-[270px]"
+          variants={navSocialsAnimation}
+        />
       </div>
     </nav>
   );

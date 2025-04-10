@@ -8,17 +8,32 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ContactForm from "./ContactForm";
 import Image from "next/image";
+import { motion } from "motion/react";
+import ContactInfoCard from "./ContactInfoCard";
 
 const Contact = () => {
   return (
     <Section>
       <div>
         <div className="text-center mb-[50px]">
-          <h2>Contact Us</h2>
-          <p className="paragraph-large">
+          <motion.h2
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+            viewport={{ once: true, amount: 0.5 }}
+          >
+            Contact Us
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            viewport={{ once: true, amount: 0.5 }}
+            className="paragraph-large"
+          >
             Most calendars are designed for teams. Slate is designed for
             freelancers
-          </p>
+          </motion.p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[50px]">
           <div className="grid gap-[50px] lg:order-2">
@@ -27,7 +42,13 @@ const Contact = () => {
               className="justify-center lg:justify-start lg:order-3"
             />
 
-            <div className="lg:w-atuo 2xl:w-[516px] h-[323px] hidden lg:block lg:mx-auto lg:order-2">
+            <motion.div
+              initial={{ opacity: 0, x: 100 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              className="lg:w-atuo 2xl:w-[516px] h-[323px] hidden lg:block lg:mx-auto lg:order-2"
+            >
               <Image
                 src="/assets/contact-map.webp"
                 alt="Location"
@@ -35,36 +56,24 @@ const Contact = () => {
                 width={516}
                 height={323}
               />
-            </div>
+            </motion.div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-[50px] lg:order-1">
-              <div className="flex items-center gap-2.5 p-2.5 lg:flex-col lg:justify-start lg:flex-1 text-center">
-                <FontAwesomeIcon
-                  icon={faLocationDot}
-                  size="2x"
-                  className="text-primary"
-                />
-                <span className="text-sm">
-                  6386 Spring St undefined Anchorage, Georgia 12473 United
-                  States
-                </span>
-              </div>
-              <div className="flex items-center gap-2.5 p-2.5 lg:flex-col lg:justify-start lg:flex-1 text-center">
-                <FontAwesomeIcon
-                  icon={faMobileScreen}
-                  size="2x"
-                  className="text-primary"
-                />
-                <span className="text-sm">(843) 555-0130</span>
-              </div>
-              <div className="flex items-center gap-2.5 p-2.5 lg:flex-col lg:justify-start lg:flex-1 text-center">
-                <FontAwesomeIcon
-                  icon={faEnvelope}
-                  size="2x"
-                  className="text-primary"
-                />
-                <span className="text-sm">willie.jennings@example.com</span>
-              </div>
+              <ContactInfoCard
+                icon={faLocationDot}
+                text="6386 Spring St undefined Anchorage, Georgia 12473 United States"
+                index={0}
+              />
+              <ContactInfoCard
+                icon={faMobileScreen}
+                text="(843) 555-0130"
+                index={1}
+              />
+              <ContactInfoCard
+                icon={faEnvelope}
+                text="willie.jennings@example.com"
+                index={2}
+              />
             </div>
           </div>
           <ContactForm />

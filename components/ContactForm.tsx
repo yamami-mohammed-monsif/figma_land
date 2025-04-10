@@ -1,8 +1,17 @@
 import React from "react";
 import Button from "./UI/Button";
+import { motion } from "motion/react";
+import { contactFormAnimation } from "@/constants/animations";
+
 const ContactForm = () => {
   return (
-    <div className="p-[50px] shadow-contact-form rounded-[20px]">
+    <motion.div
+      variants={contactFormAnimation}
+      initial="initial"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.5 }}
+      className="p-[50px] shadow-contact-form rounded-[20px]"
+    >
       <form action="" className="flex flex-col gap-11">
         <p className="font-bold text-xl leading-[28px] text-center">
           Contact Us
@@ -30,11 +39,16 @@ const ContactForm = () => {
             className="w-full rounded-md p-5 resize-none border border-input-border bg-input-bg placeholder:text-placeholder placeholder:text-sm"
           ></textarea>
         </div>
-        <Button paddingY="py-[18px]" paddingX="px-[38px]" className="w-1/2">
+        <Button
+          paddingY="py-[18px]"
+          paddingX="px-[38px]"
+          fontSize="text-xl"
+          className="w-1/2"
+        >
           Send
         </Button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

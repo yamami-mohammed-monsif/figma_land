@@ -1,7 +1,6 @@
 import Section from "./Section";
 import { useMediaQuery } from "@/hooks/useMediaQuery";
 import Image from "next/image";
-import Button from "./UI/Button";
 import { motion } from "motion/react";
 import {
   subscribeImageAnimation,
