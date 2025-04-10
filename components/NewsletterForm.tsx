@@ -1,4 +1,4 @@
-"use client"; // Required for using hooks in Next.js App Router
+"use client";
 
 import { useState } from "react";
 import Button from "./UI/Button";
@@ -50,13 +50,15 @@ const NewsletterForm = () => {
         );
         setEmail(""); // Clear email input on success
       } else {
+        // Handle the new error format (success: false, message: "error message")
         showMessage(
-          data.error || "An error occurred. Please try again.",
+          data.message || data.error || "An error occurred. Please try again.",
           "error"
         );
       }
     } catch (error) {
       showMessage("An unexpected error occurred. Please try again.", "error");
+      console.error("Fetch error:", error);
     } finally {
       setLoading(false);
     }

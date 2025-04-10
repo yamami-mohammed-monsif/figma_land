@@ -1,62 +1,100 @@
 import { NextResponse } from "next/server";
 
-// Get Mailchimp configuration from environment variables
-const MAILCHIMP_API_KEY = process.env.MAILCHIMP_API_KEY;
-const AUDIENCE_ID = process.env.MAILCHIMP_AUDIENCE_ID;
-const DATA_CENTER = process.env.MAILCHIMP_DATA_CENTER;
-
-// Validate required environment variables
-if (!MAILCHIMP_API_KEY || !AUDIENCE_ID || !DATA_CENTER) {
-  throw new Error("Missing Mailchimp environment variables");
-}
-
 export async function POST(request: Request) {
   try {
-    // Parse request body
+    // Get the email from the request body
     const { email } = await request.json();
 
-    // Validate email
+    // Basic validation
     if (!email || !email.includes("@")) {
       return NextResponse.json(
-        { error: "Invalid email address" },
+        { success: false, message: "Please provide a valid email address" },
         { status: 400 }
       );
     }
 
-    // Prepare request to Mailchimp API
-    const url = `https://${DATA_CENTER}.api.mailchimp.com/3.0/lists/${AUDIENCE_ID}/members`;
+    // Get Mailchimp credentials from environment variables
+    const apiKey = process.env.MAILCHIMP_API_KEY;
+    const serverPrefix = process.env.MAILCHIMP_SERVER_PREFIX || "us8";
+    const listId = process.env.MAILCHIMP_LIST_ID || "ca1539c15f";
+
+    // Check if API key exists
+    if (!apiKey) {
+      console.error("Missing Mailchimp API key");
+      return NextResponse.json(
+        { success: false, message: "Server configuration error" },
+        { status: 500 }
+      );
+    }
+
+    // Set up the API URL and request data
+    const apiUrl = `https://${serverPrefix}.api.mailchimp.com/3.0/lists/${listId}/members`;
+
     const data = {
       email_address: email,
-      status: "subscribed",
+      status: "subscribed", // Using "pending" for double opt-in (recommended)
     };
 
-    // Send request to Mailchimp
-    const response = await fetch(url, {
+    // Make the request to Mailchimp's API
+    const response = await fetch(apiUrl, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `Bearer ${MAILCHIMP_API_KEY}`,
+        Authorization: `Basic ${Buffer.from(`anystring:${apiKey}`).toString(
+          "base64"
+        )}`,
       },
       body: JSON.stringify(data),
     });
 
-    // Handle response
+    // Parse Mailchimp's response
+    const responseData = await response.json();
+
+    // Handle the response based on status code
     if (response.ok) {
+      // Success case
       return NextResponse.json(
-        { message: "Subscribed successfully!" },
+        {
+          success: true,
+          message:
+            "Thank you for subscribing! Please check your email to confirm.",
+        },
         { status: 201 }
       );
     } else {
-      const errorData = await response.json();
+      // Handle special error cases
+      if (responseData.title === "Member Exists") {
+        return NextResponse.json(
+          {
+            success: false,
+            message: "You are already subscribed to our newsletter!",
+          },
+          { status: 400 }
+        );
+      }
+
+      // Log error for debugging but don't expose details to user
+      console.error("Mailchimp API Error:", responseData);
+
+      // Return specific error message if available
       return NextResponse.json(
-        { error: errorData.detail },
-        { status: response.status }
+        {
+          success: false,
+          message:
+            responseData.detail ||
+            "Failed to subscribe. Please try again later.",
+        },
+        { status: 400 }
       );
     }
   } catch (error) {
-    // Handle unexpected errors
+    // Unexpected errors (server errors, network issues, etc.)
+    console.error("Server error:", error);
     return NextResponse.json(
-      { error: "Server error, please try again" },
+      {
+        success: false,
+        message: "An unexpected error occurred. Please try again later.",
+      },
       { status: 500 }
     );
   }

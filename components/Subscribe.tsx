@@ -54,7 +54,7 @@ const Subscribe = () => {
             Subscribe to our Newsletter
           </p>
           <p className="text-lg leading-[25px] mt-2.5">
-            Available exclusivery on Figmaland
+            Available exclusively on Figmaland
           </p>
 
           <NewsletterForm />
