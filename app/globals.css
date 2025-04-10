@@ -21,6 +21,7 @@
   --spacing-37: 148px;
 
   --shadow-video: 0 5px 25px hsla(0, 0%, 0%, 0.15);
+  --shadow-contact-form: 0 13px 19px hsla(0, 0%, 0%, 0.07);
 }
 
 @layer base {

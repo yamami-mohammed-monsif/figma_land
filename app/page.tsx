@@ -11,6 +11,7 @@ import Subscribe from "@/components/Subscribe";
 import Partners from "@/components/Partners";
 import Testimonials from "@/components/Testimonials";
 import Pricing from "@/components/Pricing";
+import Contact from "@/components/Contact";
 
 const HomePage: React.FC = () => {
   return (
@@ -34,6 +35,7 @@ const HomePage: React.FC = () => {
       <Partners />
       <Testimonials />
       <Pricing />
+      <Contact />
     </main>
   );
 };

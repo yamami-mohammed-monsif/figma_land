@@ -1,7 +1,7 @@
 import { NavLinks } from "@/constants";
 import NavLink from "./NavLink";
 import Image from "next/image";
-import Socials from "./Socials";
+import Socials from "../UI/Socials";
 import { logoAnimation, navLinksAnimation } from "@/constants/animations";
 import { motion } from "motion/react";
 
@@ -42,7 +42,7 @@ const DesktopNav: React.FC = () => {
             priority
           />
         </motion.div>
-        <Socials />
+        <Socials className="ml-[100px] xl:ml-[270px]" />
       </div>
     </nav>
   );

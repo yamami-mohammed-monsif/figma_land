@@ -22,7 +22,7 @@ const PricingCards = ({
     <motion.div
       className={`max-w-[335px] mx-auto p-10 mt-[80px] rounded-[10px] text-center flex flex-col gap-[30px] ${
         isHighlighted
-          ? "bg-primary text-white border border-primary scale-110"
+          ? "bg-primary text-white border border-primary lg:scale-110"
           : "bg-white text-paragraph"
       }`}
       initial="initial"
