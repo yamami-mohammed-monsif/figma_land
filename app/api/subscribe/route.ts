@@ -32,7 +32,7 @@ export async function POST(request: Request) {
 
     const data = {
       email_address: email,
-      status: "subscribed", // Using "pending" for double opt-in (recommended)
+      status: "pending", // Using "pending" for double opt-in
     };
 
     // Make the request to Mailchimp's API
