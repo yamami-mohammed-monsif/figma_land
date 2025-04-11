@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Inter, Roboto } from "next/font/google";
 
-export const inter = Inter({
+const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
 });
 
-export const roboto = Roboto({
+const roboto = Roboto({
   subsets: ["latin"],
   variable: "--font-roboto",
 });
