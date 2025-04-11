@@ -24,7 +24,8 @@ const Socials: React.FC<SocialsProps> = ({
     <motion.div
       variants={variants}
       initial="initial"
-      animate="animate"
+      whileInView="animate"
+      viewport={{ once: true, amount: 0.5 }}
       className={`flex items-center gap-11 ${className}`}
     >
       <FontAwesomeIcon

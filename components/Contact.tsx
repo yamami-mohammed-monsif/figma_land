@@ -10,7 +10,10 @@ import ContactForm from "./ContactForm";
 import Image from "next/image";
 import { motion } from "motion/react";
 import ContactInfoCard from "./ContactInfoCard";
-import { contactInfoCardAnimation } from "@/constants/animations";
+import {
+  contactInfoCardAnimation,
+  contactSocialsAnimation,
+} from "@/constants/animations";
 
 const Contact = () => {
   return (
@@ -41,6 +44,7 @@ const Contact = () => {
             <Socials
               color="primary"
               className="justify-center lg:justify-start lg:order-3"
+              variants={contactSocialsAnimation}
             />
 
             <motion.div
