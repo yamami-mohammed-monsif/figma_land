@@ -29,7 +29,7 @@ const Testimonials = () => {
         <MotionH1
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
+          transition={{ duration: 0.4, ease: "easeOut" }}
           viewport={{ once: true, amount: 0.5 }}
         >
           Testimonials
@@ -37,7 +37,7 @@ const Testimonials = () => {
         <MotionP
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
           viewport={{ once: true, amount: 0.5 }}
           className="paragraph-large text-center"
         >
@@ -47,7 +47,7 @@ const Testimonials = () => {
         <MotionDiv
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: "easeOut", delay: 0.4 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: 0.4 }}
           viewport={{ once: true, amount: 0.5 }}
           className="flex items-center gap-2.5"
         >

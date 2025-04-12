@@ -14,7 +14,7 @@ const Features = () => {
           <motion.h2
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
             Features
@@ -22,7 +22,7 @@ const Features = () => {
           <motion.p
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className="paragraph-large"
           >
@@ -35,7 +35,7 @@ const Features = () => {
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.4 }}
             className="rounded-2xl overflow-hidden shadow-video max-w-[1177px] max-h-[660px] mx-auto"
           >

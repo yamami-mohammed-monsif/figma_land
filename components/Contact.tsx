@@ -43,7 +43,7 @@ const Contact = () => {
           <MotionH1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
           >
             Contact Us
@@ -51,7 +51,7 @@ const Contact = () => {
           <MotionP
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className="paragraph-large"
           >
@@ -71,7 +71,7 @@ const Contact = () => {
               initial={{ opacity: 0, x: 100 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+              transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
               className="lg:w-atuo 2xl:w-[516px] h-[323px] hidden lg:block lg:mx-auto lg:order-2"
             >
               <Image

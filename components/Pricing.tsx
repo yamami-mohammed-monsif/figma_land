@@ -25,7 +25,7 @@ const Pricing = () => {
           <MotionH1
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            transition={{ duration: 0.4, ease: "easeOut" }}
             viewport={{ once: true, amount: 0.5 }}
             className="text-white"
           >
@@ -34,7 +34,7 @@ const Pricing = () => {
           <MotionP
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut", delay: 0.2 }}
+            transition={{ duration: 0.4, ease: "easeOut", delay: 0.2 }}
             viewport={{ once: true, amount: 0.5 }}
             className="text-xl lg:text-[28px] text-white lg:leading-[40px] p-2.5 tracking-[0.2px] max-w-[600px] mx-auto"
           >
