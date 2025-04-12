@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import { lazy } from "react";
 import NavBar from "@/components/navigation/NavBar";
 import Hero from "@/components/Hero";
 import { motion } from "motion/react";
@@ -9,10 +9,10 @@ import Features from "@/components/Features";
 import CTA from "@/components/CTA";
 import Subscribe from "@/components/Subscribe";
 import Partners from "@/components/Partners";
-import Testimonials from "@/components/Testimonials";
-import Pricing from "@/components/Pricing";
-import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
+const Testimonials = lazy(() => import("@/components/Testimonials"));
+const Pricing = lazy(() => import("@/components/Pricing"));
+const Contact = lazy(() => import("@/components/Contact"));
+const Footer = lazy(() => import("@/components/Footer"));
 
 const HomePage: React.FC = () => {
   return (

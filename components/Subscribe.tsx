@@ -41,6 +41,7 @@ const Subscribe = () => {
             alt="Subscribe"
             width={677}
             height={514}
+            loading="lazy"
           />
         </motion.div>
         <motion.div

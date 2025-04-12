@@ -21,7 +21,7 @@ const PartnerCard = ({ name, image, alt, index }: PartnerCardProps) => {
       }}
     >
       <p className="text-base text-paragraph leading-[22px] mb-4">{name}</p>
-      <Image src={image} alt={alt} width={100} height={100} />
+      <Image src={image} alt={alt} width={100} height={100} loading="lazy" />
     </motion.div>
   );
 };

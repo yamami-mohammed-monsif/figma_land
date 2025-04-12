@@ -60,6 +60,7 @@ const Contact = () => {
                 className="w-full h-full object-cover"
                 width={516}
                 height={323}
+                loading="lazy"
               />
             </motion.div>
 

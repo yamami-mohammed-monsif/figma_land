@@ -44,6 +44,7 @@ const CTA = () => {
             alt="CTA"
             width={646}
             height={370}
+            loading="lazy"
           />
         </motion.div>
       </div>

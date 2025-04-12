@@ -37,6 +37,7 @@ const Testimonials = () => {
             width={42}
             height={42}
             className="rounded-full"
+            loading="lazy"
           />
           <div className="text-left text-[10px] font-bold text-paragraph">
             <p>Organize across</p>
