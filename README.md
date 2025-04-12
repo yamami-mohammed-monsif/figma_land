@@ -6,16 +6,16 @@ A modern, responsive landing page built with Next.js and Tailwind CSS. This proj
 
 ## 📋 Table of Content
 
-- [Demo](#demo)
-- [Features](#features)
-- [Technologies Used](#technologies-used)
-- [Installation](#installation)
-- [Contributing](#contributing)
-- [License](#license)
+- [Demo](#🚀-demo)
+- [Features](#✨-features)
+- [Technologies Used](#🛠️-technologies-used)
+- [Installation](#💻-installation)
+- [Contributing](#🤝-contributing)
+- [License](#📄-license)
 
 ## 🚀 Demo
 
-Live demo: [Figma Land](https://figma-land.vercel.app/)
+Live demo: [Figma Land](https://figma-land-lp.vercel.app/)
 
 ## ✨ Features
 
@@ -51,7 +51,7 @@ Live demo: [Figma Land](https://figma-land.vercel.app/)
 1. Clone the repository:
 
    ```bash
-   git clone https://your-repo-url/figma_land.git
+   git clone https://github.com/yamami-mohammed-monsif/figma_land.git
    cd figma_land
    ```
 
