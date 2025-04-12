@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Button from "./UI/Button";
 import { motion } from "motion/react";
-import { contactFormAnimation } from "@/constants/animations";
+import { fadeInFromLeft } from "@/constants/animations";
 import Notifications from "./UI/Notifications";
 import LoadingSpinner from "./UI/LoadingSpinner";
 
@@ -112,7 +112,7 @@ const ContactForm = () => {
 
   return (
     <motion.div
-      variants={contactFormAnimation}
+      variants={fadeInFromLeft}
       initial="initial"
       whileInView="animate"
       viewport={{ once: true, amount: 0.5 }}

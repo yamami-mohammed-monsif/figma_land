@@ -1,5 +1,12 @@
+"use client";
+import dynamic from "next/dynamic";
 import Button from "./UI/Button";
-import { motion } from "motion/react";
+const MotionDiv = dynamic(
+  () => import("motion/react").then((mod) => mod.motion.div),
+  {
+    ssr: false,
+  }
+);
 
 interface PricingCardsProps {
   title: string;
@@ -19,7 +26,7 @@ const PricingCards = ({
   variants,
 }: PricingCardsProps) => {
   return (
-    <motion.div
+    <MotionDiv
       className={`max-w-[335px] mx-auto p-10 mt-[80px] rounded-[10px] text-center flex flex-col gap-[30px] ${
         isHighlighted
           ? "bg-primary text-white border border-primary lg:scale-110"
@@ -70,7 +77,7 @@ const PricingCards = ({
       >
         Order Now
       </Button>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

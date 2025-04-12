@@ -1,7 +1,13 @@
-import React from "react";
+"use client";
+import dynamic from "next/dynamic";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IconProp } from "@fortawesome/fontawesome-svg-core";
-import { motion } from "motion/react";
+const MotionDiv = dynamic(
+  () => import("motion/react").then((mod) => mod.motion.div),
+  {
+    ssr: false,
+  }
+);
 
 interface ContactInfoCardProps {
   icon: IconProp;
@@ -21,7 +27,7 @@ const ContactInfoCard = ({
   variants,
 }: ContactInfoCardProps) => {
   return (
-    <motion.div
+    <MotionDiv
       variants={variants}
       initial="initial"
       whileInView="whileInView"
@@ -34,7 +40,7 @@ const ContactInfoCard = ({
     >
       <FontAwesomeIcon icon={icon} size="2x" className={`${iconColor}`} />
       <span className="text-sm">{text}</span>
-    </motion.div>
+    </MotionDiv>
   );
 };
 

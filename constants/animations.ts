@@ -150,10 +150,56 @@ export const buttonAnimation = {
   }),
 };
 
+// fade animations
+export const fadeInFromLeft = {
+  initial: {
+    opacity: 0,
+    x: -50,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const fadeInFromRight = {
+  initial: {
+    opacity: 0,
+    x: 50,
+  },
+  animate: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
+export const fadeInFromBottom = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  },
+};
+
 // Feature cards animations
 export const featureCardVariants = {
   left: {
-    initial: { opacity: 0, x: -100 },
+    initial: { opacity: 0, x: -50 },
     animate: {
       opacity: 1,
       x: 0,
@@ -169,73 +215,11 @@ export const featureCardVariants = {
     },
   },
   right: {
-    initial: { opacity: 0, x: 100 },
+    initial: { opacity: 0, x: 50 },
     animate: {
       opacity: 1,
       x: 0,
       transition: { duration: 0.7, ease: "easeOut" },
-    },
-  },
-};
-
-// CTA section animations
-export const ctaTextAnimation = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-export const ctaImageAnimation = {
-  initial: {
-    opacity: 0,
-    x: 100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-// Subscribe section animations
-export const subscribeImageAnimation = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-export const subscribeFormAnimation = {
-  initial: {
-    opacity: 0,
-    x: 100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
     },
   },
 };
@@ -268,42 +252,11 @@ export const PricingCardsVariants = {
   },
 };
 
-// Contact section animations
-export const contactFormAnimation = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.8,
-      ease: "easeOut",
-    },
-  },
-};
-
-export const contactSocialsAnimation = {
-  initial: {
-    opacity: 0,
-    x: -100,
-  },
-  animate: {
-    opacity: 1,
-    x: 0,
-    transition: {
-      duration: 0.4,
-      ease: "easeOut",
-    },
-  },
-};
-
 // Contact info card animation
 export const contactInfoCardAnimation = {
   initial: {
     opacity: 0,
-    x: 100,
+    x: 50,
   },
   whileInView: {
     opacity: 1,

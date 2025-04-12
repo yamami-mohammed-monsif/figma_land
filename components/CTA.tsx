@@ -2,7 +2,7 @@ import Button from "./UI/Button";
 import Section from "./Section";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ctaTextAnimation, ctaImageAnimation } from "../constants/animations";
+import { fadeInFromLeft, fadeInFromRight } from "../constants/animations";
 
 const CTA = () => {
   return (
@@ -10,7 +10,7 @@ const CTA = () => {
       <div className="flex flex-col items-center lg:flex-row lg:justify-center gap-14">
         <motion.div
           className="text-center lg:text-left"
-          variants={ctaTextAnimation}
+          variants={fadeInFromLeft}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
@@ -34,7 +34,7 @@ const CTA = () => {
         </motion.div>
         <motion.div
           className="p-2"
-          variants={ctaImageAnimation}
+          variants={fadeInFromRight}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.5 }}
